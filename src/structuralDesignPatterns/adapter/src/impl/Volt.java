@@ -1,4 +1,4 @@
-package structuralDesignPatterns.adapter.domain;
+package structuralDesignPatterns.adapter.src.impl;
 
 /**
  * Volt.

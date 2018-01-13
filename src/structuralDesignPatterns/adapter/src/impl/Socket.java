@@ -1,4 +1,4 @@
-package structuralDesignPatterns.adapter.domain;
+package structuralDesignPatterns.adapter.src.impl;
 
 /**
  * Socket класс который умеет передавать только 120 вольт.
