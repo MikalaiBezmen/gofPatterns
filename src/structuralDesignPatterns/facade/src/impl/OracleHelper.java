@@ -1,4 +1,7 @@
-package structuralDesignPatterns.facade.domain;
+package structuralDesignPatterns.facade.src.impl;
+
+import structuralDesignPatterns.facade.src.api.DBHelper;
+import structuralDesignPatterns.facade.src.api.ReportHelper;
 
 import java.sql.Connection;
 

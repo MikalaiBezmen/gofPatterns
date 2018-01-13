@@ -1,4 +1,4 @@
-package structuralDesignPatterns.facade.domain;
+package structuralDesignPatterns.facade.src.api;
 
 /**
  * DBTypes.

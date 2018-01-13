@@ -1,10 +1,10 @@
-package structuralDesignPatterns.facade;
+package structuralDesignPatterns.facade.src;
 
-import structuralDesignPatterns.facade.domain.DBTypes;
-import structuralDesignPatterns.facade.domain.HelperFacade;
-import structuralDesignPatterns.facade.domain.MySqlHelper;
-import structuralDesignPatterns.facade.domain.OracleHelper;
-import structuralDesignPatterns.facade.domain.ReportTypes;
+import structuralDesignPatterns.facade.src.api.DBTypes;
+import structuralDesignPatterns.facade.src.impl.HelperFacade;
+import structuralDesignPatterns.facade.src.impl.MySqlHelper;
+import structuralDesignPatterns.facade.src.impl.OracleHelper;
+import structuralDesignPatterns.facade.src.api.ReportTypes;
 
 import java.sql.Connection;
 
