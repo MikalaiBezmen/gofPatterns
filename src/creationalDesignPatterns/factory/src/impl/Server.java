@@ -34,30 +34,4 @@ public class Server extends Computer {
     public String getCPU() {
         return this.cpu;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Server)) return false;
-
-        Server server = (Server) o;
-
-        return ram.equals(server.ram) && hdd.equals(server.hdd) && cpu.equals(server.cpu);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = ram.hashCode();
-        result = 31 * result + hdd.hashCode();
-        result = 31 * result + cpu.hashCode();
-        return result;
-    }
-
-    @Override
-    public String toString() {
-        return "Server{" + "ram='" + ram + '\'' +
-                ", hdd='" + hdd + '\'' +
-                ", cpu='" + cpu + '\'' +
-                '}';
-    }
 }

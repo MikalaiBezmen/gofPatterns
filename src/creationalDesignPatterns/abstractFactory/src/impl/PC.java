@@ -1,6 +1,7 @@
-package creationalDesignPatterns.factory.src.impl;
+package creationalDesignPatterns.abstractFactory.src.impl;
 
-import creationalDesignPatterns.factory.src.api.Computer;
+
+import creationalDesignPatterns.abstractFactory.src.api.Computer;
 
 /**
  * PC.

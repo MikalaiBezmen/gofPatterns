@@ -1,20 +1,21 @@
-package creationalDesignPatterns.factory.src.impl;
+package creationalDesignPatterns.abstractFactory.src.impl;
 
-import creationalDesignPatterns.factory.src.api.Computer;
+
+import creationalDesignPatterns.abstractFactory.src.api.Computer;
 
 /**
- * PC.
+ * Server.
  * Date: 01/13/2018
  *
  * @author Mikalai Bezmen
  */
-public class PC extends Computer {
+public class Server extends Computer {
 
     private String ram;
     private String hdd;
     private String cpu;
 
-    PC(String ram, String hdd, String cpu) {
+    Server(String ram, String hdd, String cpu) {
         this.ram = ram;
         this.hdd = hdd;
         this.cpu = cpu;
