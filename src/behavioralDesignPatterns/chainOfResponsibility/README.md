@@ -6,6 +6,8 @@ process them. Then the object in the chain will decide themselves who will
 be processing the request and whether the request is required to be sent to
 the next object in the chain or not.
 
+![Class Diagram](ChainOfResponsibilityPatternClassDiagram.png)
+
 ## Chain of Responsibility Pattern Examples in JDK
 - java.util.logging.Logger#log()
 - javax.servlet.Filter#doFilter()

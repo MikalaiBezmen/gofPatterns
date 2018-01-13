@@ -10,6 +10,8 @@ intent is:
  that when one object changes state, all its dependents are
  notified and updated automatically.`
  
+![Class Diagram](ObserverPatternClassDiagram.png)
+
 Observer pattern is also called as publish-subscribe pattern. Some of it’s
 implementations are;
 - java.util.EventListener in Swing

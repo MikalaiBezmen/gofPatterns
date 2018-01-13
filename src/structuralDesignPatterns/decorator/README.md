@@ -6,6 +6,8 @@ design pattern is one of the structural design pattern (such as Adapter
 Pattern, Bridge Pattern, Composite Pattern) and uses abstract classes or
 interface with composition to implement.
 
+![Class Diagram](DecoratorPatternClassDiagram.png)
+
 Important Points
 - Decorator pattern is helpful in providing runtime modification
 abilities and hence more flexible. It’s easy to maintain and extend

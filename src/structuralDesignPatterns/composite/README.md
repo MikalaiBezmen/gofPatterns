@@ -15,6 +15,8 @@ component. It doesn’t have references to other Components.
 3. Composite – It consists of leaf elements and implements the
 operations in base component.
 
+![Class Diagram](CompositePatternClassDiagram.png)
+
 ##Important Points about Composite Pattern
 - Composite pattern should be applied only when the group of objects
 should behave as the single object.

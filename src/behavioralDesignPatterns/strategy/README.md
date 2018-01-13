@@ -12,6 +12,8 @@ implementations of Comparator interfaces, the Objects are getting sorted in
 different ways, check this post for sorting objects in java using Java
 Comparable and Comparator.
 
+![Class Diagram](StrategyPatternClassDiagram.png)
+
 ## Important Points
 - We could have used composition to create instance variable for
 strategies but we should avoid that as we want the specific strategy to

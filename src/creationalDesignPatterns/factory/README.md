@@ -8,6 +8,9 @@ pattern take out the responsibility of instantiation of a class from client
 program to the factory class. Let’s first learn how to implement factory
 pattern in java and then we will learn its benefits and we will see its usage in
 JDK.
+
+![Class Diagram](FactoryPatternClassDiagram.png)
+
 ##Benefits of Factory Pattern
 - Factory pattern provides approach to code for interface rather than
 implementation.

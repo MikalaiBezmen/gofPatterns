@@ -9,7 +9,9 @@ According to GoF bridge design pattern is:
 
 `Decouple an abstraction from its implementation so
  that the two can vary independently`
- 
+
+![Class Diagram](BridgePatternClassDiagram.png)
+
 The implementation of bridge design pattern follows the notion to prefer
 Composition over inheritance.
 

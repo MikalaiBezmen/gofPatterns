@@ -9,6 +9,8 @@ it creates the invoker object and attach the command object to perform an
 action. Now when client program executes the action, it’s processed based
 on the command and receiver object.
 
+![Class Diagram](CommandPatternClassDiagram.png)
+
 ## Command Pattern JDK Example
 Runnable interface (java.lang.Runnable) and Swing Action
 (javax.swing.Action) uses command pattern.

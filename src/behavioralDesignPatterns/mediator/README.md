@@ -10,6 +10,8 @@ According to GoF, mediator pattern intent is:
  each other. Allows for the actions of each object set to
  vary independently of one another`
  
+![Class Diagram](MediatorPatternClassDiagram.png)
+
 ## Mediator Pattern in JDK
 - java.util.Timer class scheduleXXX() methods
 - Java Concurrency Executor execute() method.

@@ -5,6 +5,8 @@ subclasses. Template method defines the steps to execute an algorithm and
 it can provide default implementation that might be common for all or some
 of the subclasses.
 
+![Class Diagram](TemplateMethodPatternClassDiagram.png)
+
 ## Template Method Pattern in JDK
 - All non-abstract methods of java.io.InputStream, java.io.OutputStream, java.io.Reader and java.io.Writer.
 - All non-abstract methods of java.util.AbstractList, java.util.AbstractSet and java.util.AbstractMap.

@@ -13,5 +13,7 @@ cost of ownership (TCO) of the software product.
 understand and debug. It leads to faster development and new
 members of team understand it easily.
 
-Java Design Patterns are divided into three categories –
-**_creational_**, **_structural_**, and **_behavioral_** design patterns.
+Java Design Patterns are divided into three categories:
+- [creational](/creationalDesignPatterns/README.md)
+- [structural](/structuralDesignPatterns/README.md)
+- [behavioral](/behavioralDesignPatterns/README.md)
