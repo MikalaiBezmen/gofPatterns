@@ -1,12 +1,12 @@
-package structuralDesignPatterns.adapter;
+package structuralDesignPatterns.adapter.src;
 
-import structuralDesignPatterns.adapter.domain.SocketAdapter;
-import structuralDesignPatterns.adapter.domain.Volt;
-import structuralDesignPatterns.adapter.impl.SocketClassAdapterImpl;
-import structuralDesignPatterns.adapter.impl.SocketObjectAdapterImpl;
+import structuralDesignPatterns.adapter.src.api.SocketAdapter;
+import structuralDesignPatterns.adapter.src.impl.Volt;
+import structuralDesignPatterns.adapter.src.impl.SocketClassAdapterImpl;
+import structuralDesignPatterns.adapter.src.impl.SocketObjectAdapterImpl;
 
 /**
- * Тестовый класс для отображения работы паттерна Адаптер 2мя способами (Object/Class).
+ * AdapterMain.
  *
  * @author Mikalai Bezmen
  */

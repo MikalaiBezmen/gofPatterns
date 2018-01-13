@@ -1,4 +1,6 @@
-package structuralDesignPatterns.adapter.domain;
+package structuralDesignPatterns.adapter.src.api;
+
+import structuralDesignPatterns.adapter.src.impl.Volt;
 
 /**
  * SocketAdapter интерфейс предоставляющий API для получения различного количество вольт.

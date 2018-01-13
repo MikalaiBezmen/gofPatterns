@@ -6,7 +6,7 @@ The basic form of object creation could result in design problems or add
 unwanted complexity to the design. Creational design patterns solve this
 problem by controlling the object creation by different ways.
 
-There are five creational design patterns that we will discuss in this eBook.
+There are five creational design patterns:
 - Singleton Pattern
 - Factory Pattern
 - Abstract Factory Pattern
