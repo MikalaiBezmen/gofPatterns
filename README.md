@@ -47,6 +47,7 @@ in the java virtual machine. The singleton class must provide a global access po
 - _Builder_, 
 - _Prototype_, 
 - _Facade_ etc.
+
 **Singleton** design pattern is used in core java classes also, for example: 
 - _java.lang.Runtime_, 
 - _java.awt.Desktop_.
