@@ -1,171 +1,142 @@
 # GoF Patterns
 ## Design Patterns Overview
-**Design Patterns** are very popular among software developers. A design
-pattern is a well-described solution to a common software problem.
-Some of the benefits of using design patterns are:
-- Design Patterns are already defined and provides industry standard
-approach to solve a recurring problem, so it saves time if we sensibly
-use the design pattern.
-- Using design patterns promotes reusability that leads to
-more robust and highly maintainable code. It helps in reducing total
-cost of ownership (TCO) of the software product.
-- Since design patterns are already defined, it makes our code easy to
-understand and debug. It leads to faster development and new
-members of team understand it easily.
+**Design Patterns** are very popular among software developers. A design pattern is a well-described solution to a 
+common software problem.
 
-Java Design Patterns are divided into three categories:
-- Creational
-- Structural
-- Behavioral
+Some of the benefits of using design patterns are:
+- _Design Patterns are already defined and provides industry standard approach to solve a recurring problem, so it 
+saves time if we sensibly use the design pattern._
+- _Using design patterns promotes **reusability** that leads to more robust and highly maintainable code. It helps 
+in **reducing total cost of ownership** (TCO) of the software product._
+- _Since design patterns are already defined, it **makes our code easy to understand** and debug. It leads to **faster 
+development** and new members of team understand it easily._
+
+_Java Design Patterns_ are divided into three categories:
+1) **Creational**
+2) **Structural**
+3) **Behavioral**
 
 ### Creational Design Patterns
-Creational design patterns provide solution to instantiate an object in the best
-possible way for specific situations.
+**Creational design patterns** provide solution to instantiate an object in the best possible way for specific 
+situations.
 
-The basic form of object creation could result in design problems or add
-unwanted complexity to the design. Creational design patterns solve this
-problem by controlling the object creation by different ways.
+The basic form of object creation could result in design problems or add unwanted complexity to the design. **Creational 
+design patterns** solve this problem by controlling the object creation by different ways.
 
 There are five creational design patterns:
-- Singleton Pattern
-- Factory Pattern
-- Abstract Factory Pattern
-- Builder Pattern
-- Prototype Pattern
+1. **Singleton Pattern**
+2. **Factory Pattern**
+3. **Abstract Factory Pattern**
+4. **Builder Pattern**
+5. **Prototype Pattern**
 
-All these patterns solve specific problems with object creation, so you
-should understand and use them when needed.
-#### 1. Abstract Factory Pattern
-Abstract Factory is one of the Creational pattern and almost similar to
-Factory Pattern except the fact that it’s more like factory of factories.
-If you are familiar with factory design pattern in java, you will notice that
-we have a single Factory class that returns the different sub-classes based on
-the input provided and factory class uses if-else or switch statement to
-achieve this.
+All these patterns solve specific problems with object creation, so you should understand and use them when needed.
 
-In Abstract Factory pattern, we get rid of if-else block and have a factory
-class for each sub-class and then an Abstract Factory class that will return
-the sub-class based on the input factory class. At first it seems confusing but
-once you see the implementation, it’s really easy to grasp and understand the
-minor difference between Factory and Abstract Factory pattern.
-##### Benefits of Abstract Factory Pattern
-- Abstract Factory pattern provides approach to code for interface rather
-than implementation.
-- Abstract Factory pattern is “factory of factories” and can be easily
-extended to accommodate more products, for example we can add
-another sub-class Laptop and a factory LaptopFactory.
-- Abstract Factory pattern is robust and avoid conditional logic of
-Factory pattern.
-##### Abstract Factory Pattern Examples in JDK
-- javax.xml.parsers.DocumentBuilderFactory#newInstance()
-- javax.xml.transform.TransformerFactory#newInstance()
-- javax.xml.xpath.XPathFactory#newInstance()
+#### 1. Singleton Pattern
+**Singleton** is one of the Gangs of Four Design patterns and comes in the Creational Design Pattern category. From 
+the definition, it seems to be a very simple design pattern but when it comes to implementation, it comes with a lot 
+of implementation concerns. The implementation of **Singleton** pattern has always been a controversial topic among 
+developers. Here you can find different ways to implement **Singleton** and some of the best practices for its usage.
 
-#### 2. Builder Pattern
-Builder design pattern is a creational design pattern like Factory Pattern
-and Abstract Factory Pattern. This pattern was introduced to solve some
-of the problems with Factory and Abstract Factory design patterns when the
-Object contains a lot of attributes.
+**Singleton** pattern restricts the instantiation of a class and ensures that only one instance of the class exists 
+in the java virtual machine. The singleton class must provide a global access point to get the instance of the class.
+**Singleton** pattern is used for _logging_, _driver objects_, _caching_ and _thread pool_.
 
-There are three major issues with Factory and Abstract Factory design
-patterns when the Object contains a lot of attributes.
-1. Too Many arguments to pass from client program to the Factory class
-that can be error prone because most of the time, the type of
-arguments are same and from client side it’s hard to maintain the
-order of the argument.
-2. Some of the parameters might be optional but in Factory pattern, we
-are forced to send all the parameters and optional parameters need to
-send as NULL.
-3. If the object is heavy and its creation is complex, then all that
-complexity will be part of Factory classes that is confusing.
+**Singleton** design pattern is also used in other design patterns like:
+- _Abstract Factory_, 
+- _Builder_, 
+- _Prototype_, 
+- _Facade_ etc.
+**Singleton** design pattern is used in core java classes also, for example: 
+- _java.lang.Runtime_, 
+- _java.awt.Desktop_.
 
-We can solve the issues with large number of parameters by providing a
-constructor with required parameters and then different setter methods to set
-the optional parameters but the problem with this is that the Object state will
-be inconsistent until unless all the attributes are set explicitly.
+To implement **Singleton** pattern, we have different approaches but all of them have following common concepts.
+- _Private constructor to restrict instantiation of the class from other classes._
+- _Private static variable of the same class that is the only instance of the class._
+- _Public static method that returns the instance of the class, this is the global access point for outer world to get 
+the instance of the singleton class._
 
-Builder pattern solves the issue with large number of optional parameters
-and inconsistent state by providing a way to build the object step-by-step
-and provide a method that will actually return the final Object.
+#### 2. Factory Pattern
+**Factory** Pattern is one of the **Creational** Design pattern and it’s widely used in JDK as well as frameworks like 
+Spring and Struts.
 
-##### Builder Design Pattern Example in JDK
-- java.lang.StringBuilder#append() (unsynchronized)
-- java.lang.StringBuffer#append() (synchronized)
-
-#### 3. Factory Pattern
-Factory Pattern is one of the Creational Design pattern and it’s widely
-used in JDK as well as frameworks like Spring and Struts.
-
-Factory design pattern is used when we have a super class with multiple subclasses
-and based on input, we need to return one of the sub-class. This
-pattern take out the responsibility of instantiation of a class from client
-program to the factory class. Let’s first learn how to implement factory
-pattern in java and then we will learn its benefits and we will see its usage in
-JDK.
+**Factory** design pattern is used when we have a super class with multiple subclasses and based on input, we need to 
+return one of the sub-class. This pattern take out the responsibility of instantiation of a class from client
+program to the factory class.
 
 ![Class Diagram](src/creationalDesignPatterns/factory/FactoryPatternClassDiagram.png)
+
 ##### Benefits of Factory Pattern
-- Factory pattern provides approach to code for interface rather than
-implementation.
-- Factory pattern removes the instantiation of actual implementation
-classes from client code, making it more robust, less coupled and easy
-to extend. For example, we can easily change PC class
-implementation because client program is unaware of this.
-- Factory pattern provides abstraction between implementation and
-client classes through inheritance.
+- **Factory** pattern provides approach to code for interface rather than implementation.
+- **Factory** pattern removes the instantiation of actual implementation classes from client code, making it more 
+robust, less coupled and easy to extend. For example, we can easily change PC class implementation because client 
+program is unaware of this.
+- **Factory** pattern provides abstraction between implementation and client classes through inheritance.
 #####Factory Pattern Examples in JDK
-- java.util.Calendar, ResourceBundle and NumberFormat getInstance()
-methods uses Factory pattern.
-- valueOf() method in wrapper classes like Boolean, Integer etc.
+- _java.util.Calendar_, ResourceBundle and NumberFormat _getInstance()_ methods uses **Factory** pattern.
+- _valueOf()_ method in wrapper classes like Boolean, Integer etc.
 
-#### 4. Prototype Pattern
-Prototype pattern is one of the Creational Design pattern, so it provides a
-mechanism of object creation. Prototype pattern is used when the Object
-creation is a costly affair and requires a lot of time and resources and you
-have a similar object already existing. So this pattern provides a mechanism
-to copy the original object to a new object and then modify it according to
-our needs. This pattern uses java cloning to copy the object.
+#### 3. Abstract Factory Pattern
+**Abstract Factory** is one of the **Creational** pattern and almost similar to **Factory** Pattern except the fact 
+that it’s more like factory of factories.
+If you are familiar with factory design pattern in java, you will notice that we have a single **Factory** class that 
+returns the different sub-classes based on the input provided and factory class uses if-else or switch statement to
+achieve this.
 
-It would be easy to understand this pattern with an example, suppose we
-have an Object that loads data from database. Now we need to modify this
-data in our program multiple times, so it’s not a good idea to create the
-Object using _new_ keyword and load all the data again from database. So the
-better approach is to clone the existing object into a new object and then do
-the data manipulation.
+In **Abstract Factory** pattern, we get rid of if-else block and have a factory class for each sub-class and then 
+an **Abstract Factory** class that will return the sub-class based on the input factory class. At first it seems 
+confusing but once you see the implementation, it’s really easy to grasp and understand the minor difference between 
+**Factory** and **Abstract Factory** pattern.
+##### Benefits of Abstract Factory Pattern
+- **Abstract Factory** pattern provides approach to code for interface rather than implementation.
+- **Abstract Factory** pattern is _“factory of factories”_ and can be easily extended to accommodate more products, for 
+example we can add another sub-class Laptop and a factory LaptopFactory.
+- **Abstract Factory** pattern is robust and avoid conditional logic of **Factory** pattern.
+##### Abstract Factory Pattern Examples in JDK
+- _javax.xml.parsers.DocumentBuilderFactory#newInstance()_
+- _javax.xml.transform.TransformerFactory#newInstance()_
+- _javax.xml.xpath.XPathFactory#newInstance()_
 
-Prototype design pattern mandates that the Object which you are copying
-should provide the copying feature. It should not be done by any other class.
-However whether to use shallow or deep copy of the Object properties
+#### 4. Builder Pattern
+**Builder** design pattern is a **Creational** design pattern like **Factory** Pattern and **Abstract Factory** Pattern. 
+This pattern was introduced to solve some of the problems with **Factory** and **Abstract Factory** design patterns 
+when the Object contains a lot of attributes.
+
+There are three major issues with **Factory** and **Abstract Factory** design patterns when the Object contains a 
+lot of attributes.
+- _Too Many arguments to pass from client program to the Factory class that can be error prone because most of the time, 
+the type of arguments are same and from client side it’s hard to maintain the order of the argument._
+- _Some of the parameters might be optional but in Factory pattern, we are forced to send all the parameters and 
+optional parameters need to send as NULL._
+- _If the object is heavy and its creation is complex, then all that complexity will be part of Factory classes that 
+is confusing._
+
+We can solve the issues with large number of parameters by providing a constructor with required parameters and then 
+different setter methods to set the optional parameters but the problem with this is that the Object state will
+be inconsistent until unless all the attributes are set explicitly.
+
+**Builder** pattern solves the issue with large number of optional parameters and inconsistent state by providing a way 
+to build the object step-by-step and provide a method that will actually return the final Object.
+
+##### Builder Design Pattern Example in JDK
+- _java.lang.StringBuilder#append()_ (unsynchronized)
+- _java.lang.StringBuffer#append()_ (synchronized)
+
+#### 5. Prototype Pattern
+**Prototype** pattern is one of the **Creational** Design pattern, so it provides a mechanism of object creation. 
+**Prototype** pattern is used when the Object creation is a costly affair and requires a lot of time and resources 
+and you have a similar object already existing. So this pattern provides a mechanism to copy the original object to 
+a new object and then modify it according to our needs. This pattern uses java cloning to copy the object.
+
+It would be easy to understand this pattern with an example, suppose we have an Object that loads data from database. 
+Now we need to modify this data in our program multiple times, so it’s not a good idea to create the Object using 
+_new_ keyword and load all the data again from database. So the better approach is to clone the existing object into 
+a new object and then do the data manipulation.
+
+**Prototype** design pattern mandates that the Object which you are copying should provide the copying feature. 
+It should not be done by any other class. However whether to use shallow or deep copy of the Object properties
 depends on the requirements and it’s a design decision.
-
-#### 5. Singleton Pattern
-Singleton is one of the Gangs of Four Design patterns and comes in
-the Creational Design Pattern category. From the definition, it seems to be
-a very simple design pattern but when it comes to implementation, it comes
-with a lot of implementation concerns. The implementation of Singleton
-pattern has always been a controversial topic among developers. Here we
-will learn about Singleton design pattern principles, different ways to
-implement Singleton and some of the best practices for its usage.
-
-Singleton pattern restricts the instantiation of a class and ensures that only
-one instance of the class exists in the java virtual machine. The singleton
-class must provide a global access point to get the instance of the class.
-Singleton pattern is used for logging, driver objects, caching and thread
-pool.
-
-Singleton design pattern is also used in other design patterns like Abstract
-Factory, Builder, Prototype, Facade etc. Singleton design pattern is used in
-core java classes also, for example java.lang.Runtime, java.awt.Desktop.
-
-To implement Singleton pattern, we have different approaches but all of
-them have following common concepts.
-- Private constructor to restrict instantiation of the class from other
-classes.
-- Private static variable of the same class that is the only instance of the
-class.
-- Public static method that returns the instance of the class, this is the
-global access point for outer world to get the instance of the singleton
-class.
 
 ### Structural Design Patterns
 Structural patterns provide different ways to create a class structure, for
@@ -643,3 +614,33 @@ The drawback of visitor pattern is that we should know the return type of
 visit () methods at the time of designing otherwise we will have to change
 the interface and all of its implementations. Another drawback is that if there
 are too many implementations of visitor interface, it makes it hard to extend.
+
+#### 11. Strategy Pattern
+
+Strategy pattern is one of the behavioral design pattern. Strategy pattern
+is used when we have multiple algorithm for a specific task and client
+decides the actual implementation to be used at runtime.
+
+Strategy pattern is also known as Policy Pattern. We defines multiple
+algorithms and let client application pass the algorithm to be used as a
+parameter. One of the best example of this pattern is Collections.sort()
+method that takes Comparator parameter. Based on the different
+implementations of Comparator interfaces, the Objects are getting sorted in
+different ways, check this post for sorting objects in java using Java
+Comparable and Comparator.
+
+![Class Diagram](src/behavioralDesignPatterns/strategy/StrategyPatternClassDiagram.png)
+
+## Important Points
+- We could have used composition to create instance variable for
+strategies but we should avoid that as we want the specific strategy to
+be applied for a particular task, same is followed in Collections.sort()
+and Arrays.sort() method that take comparator as argument.
+- Strategy Pattern is very similar to State Pattern. One of the
+difference is that Context contains state as instance variable and there
+can be multiple tasks whose implementation can be dependent on the
+state whereas in strategy pattern strategy is passed as argument to the
+method and context object doesn’t have any variable to store it.
+- Strategy pattern is useful when we have multiple algorithms for
+specific task and we want our application to be flexible to choose any
+of the algorithm at runtime for specific task.
