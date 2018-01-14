@@ -18,7 +18,7 @@ Java Design Patterns are divided into three categories:
 - Structural
 - Behavioral
 
-###Creational Design Patterns
+### Creational Design Patterns
 Creational design patterns provide solution to instantiate an object in the best
 possible way for specific situations.
 
@@ -35,7 +35,7 @@ There are five creational design patterns:
 
 All these patterns solve specific problems with object creation, so you
 should understand and use them when needed.
-####1. Abstract Factory Pattern
+#### 1. Abstract Factory Pattern
 Abstract Factory is one of the Creational pattern and almost similar to
 Factory Pattern except the fact that it’s more like factory of factories.
 If you are familiar with factory design pattern in java, you will notice that
@@ -48,7 +48,7 @@ class for each sub-class and then an Abstract Factory class that will return
 the sub-class based on the input factory class. At first it seems confusing but
 once you see the implementation, it’s really easy to grasp and understand the
 minor difference between Factory and Abstract Factory pattern.
-#####Benefits of Abstract Factory Pattern
+##### Benefits of Abstract Factory Pattern
 - Abstract Factory pattern provides approach to code for interface rather
 than implementation.
 - Abstract Factory pattern is “factory of factories” and can be easily
@@ -56,12 +56,12 @@ extended to accommodate more products, for example we can add
 another sub-class Laptop and a factory LaptopFactory.
 - Abstract Factory pattern is robust and avoid conditional logic of
 Factory pattern.
-#####Abstract Factory Pattern Examples in JDK
+##### Abstract Factory Pattern Examples in JDK
 - javax.xml.parsers.DocumentBuilderFactory#newInstance()
 - javax.xml.transform.TransformerFactory#newInstance()
 - javax.xml.xpath.XPathFactory#newInstance()
 
-####2. Builder Pattern
+#### 2. Builder Pattern
 Builder design pattern is a creational design pattern like Factory Pattern
 and Abstract Factory Pattern. This pattern was introduced to solve some
 of the problems with Factory and Abstract Factory design patterns when the
@@ -88,11 +88,11 @@ Builder pattern solves the issue with large number of optional parameters
 and inconsistent state by providing a way to build the object step-by-step
 and provide a method that will actually return the final Object.
 
-#####Builder Design Pattern Example in JDK
+##### Builder Design Pattern Example in JDK
 - java.lang.StringBuilder#append() (unsynchronized)
 - java.lang.StringBuffer#append() (synchronized)
 
-####3. Factory Pattern
+#### 3. Factory Pattern
 Factory Pattern is one of the Creational Design pattern and it’s widely
 used in JDK as well as frameworks like Spring and Struts.
 
@@ -104,7 +104,7 @@ pattern in java and then we will learn its benefits and we will see its usage in
 JDK.
 
 ![Class Diagram](src/creationalDesignPatterns/factory/FactoryPatternClassDiagram.png)
-#####Benefits of Factory Pattern
+##### Benefits of Factory Pattern
 - Factory pattern provides approach to code for interface rather than
 implementation.
 - Factory pattern removes the instantiation of actual implementation
@@ -118,7 +118,7 @@ client classes through inheritance.
 methods uses Factory pattern.
 - valueOf() method in wrapper classes like Boolean, Integer etc.
 
-####4. Prototype Pattern
+#### 4. Prototype Pattern
 Prototype pattern is one of the Creational Design pattern, so it provides a
 mechanism of object creation. Prototype pattern is used when the Object
 creation is a costly affair and requires a lot of time and resources and you
@@ -138,7 +138,7 @@ should provide the copying feature. It should not be done by any other class.
 However whether to use shallow or deep copy of the Object properties
 depends on the requirements and it’s a design decision.
 
-####5. Singleton Pattern
+#### 5. Singleton Pattern
 Singleton is one of the Gangs of Four Design patterns and comes in
 the Creational Design Pattern category. From the definition, it seems to be
 a very simple design pattern but when it comes to implementation, it comes
@@ -167,7 +167,7 @@ class.
 global access point for outer world to get the instance of the singleton
 class.
 
-###Structural Design Patterns
+### Structural Design Patterns
 Structural patterns provide different ways to create a class structure, for
 example using inheritance and composition to create a large object from
 small objects.
@@ -181,7 +181,7 @@ There are five creational design patterns:
 - Bridge Pattern
 - Decorator Pattern
 
-####1. Adapter Design Pattern
+#### 1. Adapter Design Pattern
 Adapter design pattern is one of the structural design pattern and it’s
 used so that two unrelated interfaces can work together. The object that joins
 these unrelated interface is called an Adapter. As a real life example, we
@@ -201,12 +201,12 @@ source interface, in our case Socket class.
 2. Object Adapter – This form uses Java Composition and adapter
 contains the source object.
 
-#####Adapter Pattern Example in JDK
+##### Adapter Pattern Example in JDK
 - java.util.Arrays#asList()
 - java.io.InputStreamReader(InputStream) (returns a Reader)
 - java.io.OutputStreamWriter(OutputStream) (returns a Writer)
 
-####2. Bridge Pattern
+#### 2. Bridge Pattern
 When we have interface hierarchies in both interfaces as well as
 implementations, then builder design pattern is used to decouple the
 interfaces from implementation and hiding the implementation details from
@@ -246,7 +246,7 @@ operations in base component.
 
 ![Class Diagram](src/structuralDesignPatterns/composite/CompositePatternClassDiagram.png)
 
-#####Important Points about Composite Pattern
+##### Important Points about Composite Pattern
 - Composite pattern should be applied only when the group of objects
 should behave as the single object.
 - Composite pattern can be used to create a tree like structure.
@@ -273,7 +273,7 @@ kind of objects (decorators).
 - Decorator pattern is used a lot in Java IO classes, such as FileReader,
 BufferedReader etc.
 
-####5. Facade Pattern
+#### 5. Facade Pattern
 Facade Pattern is one of the Structural design patterns (such as Adapter
 pattern and Decorator pattern) and used to help client applications to easily
 interact with the system.
@@ -301,7 +301,7 @@ that does the similar kind of jobs.
 - We can use Factory pattern with Facade to provide better interface to
 client systems.
  
-####6. Flyweight Pattern
+#### 6. Flyweight Pattern
 According to GoF, flyweight design pattern intent is:
 
 `Use sharing to support large numbers of fine-grained
@@ -335,7 +335,7 @@ concrete implementations as Line and Oval. Oval class will have intrinsic
 property to determine whether to fill the Oval with given color or not
 whereas Line will not have any intrinsic property.
 
-#####Flyweight Pattern Example in JDK
+##### Flyweight Pattern Example in JDK
 All the wrapper classes valueOf() method uses cached objects showing use
 of Flyweight design pattern. The best example is Java String class String
 Pool implementation.
@@ -352,7 +352,7 @@ we need to use it judiciously based on our requirements.
 intrinsic properties of Object is huge, making implementation of
 Factory class complex.
 
-####7. Proxy Pattern
+#### 7. Proxy Pattern
 Proxy Design pattern is one of the Structural design pattern and in my
 opinion one of the simplest pattern to understand. Proxy pattern intent
 according to GoF is:
@@ -368,7 +368,7 @@ because client program can issue command to delete some system files or
 change some settings that you don’t want. Here a proxy class can be created
 to provide controlled access of the program.
 
-###Behavioral Design Patterns
+### Behavioral Design Patterns
 Behavioral patterns provide solution for the better interaction between
 objects and how to provide lose coupling and flexibility to extend easily.
 
@@ -384,7 +384,7 @@ objects and how to provide lose coupling and flexibility to extend easily.
 - Iterator Pattern
 - Memento Pattern
 
-####1. Chain of Responsibility Pattern
+#### 1. Chain of Responsibility Pattern
 Chain of responsibility design pattern is one of the behavioral design
 pattern. Chain of responsibility pattern is used to achieve lose coupling in
 software design where a request from client is passed to a chain of objects to
@@ -421,7 +421,7 @@ comes with the trade-off of having a lot of implementation classes and
 maintenance problems if most of the code is common in all the
 implementations.
 
-####2. Command Pattern
+#### 2. Command Pattern
 Command Pattern is one of the Behavioral Design Pattern and it’s used
 to implement lose coupling in a request-response model. In command
 pattern, the request is send to the invoker and invoker pass it to the
@@ -458,7 +458,7 @@ without changing the client code.
 confusing with high number of action methods and because of so
 many associations.
 
-####3. Interpreter Pattern
+#### 3. Interpreter Pattern
 Interpreter pattern is one of the behavioral design pattern and is used to
 define a grammatical representation for a language and provides an
 interpreter to deal with this grammar. The best example of this pattern is
@@ -479,7 +479,7 @@ provide efficiency.
 - java.util.Pattern and subclasses of java.text.Format are some of the
 examples of interpreter pattern used in JDK.
 
-####4. Iterator Pattern
+#### 4. Iterator Pattern
 Iterator pattern in one of the behavioral pattern and it’s used to provide a
 standard way to traverse through a group of Objects. Iterator pattern is
 widely used in Java Collection Framework where Iterator interface provides
@@ -495,20 +495,20 @@ provide different kind of iterators based on our requirements. Iterator pattern
 hides the actual implementation of traversal through the collection and client
 programs just use iterator methods.
 
-#####Iterator Pattern in JDK
+##### Iterator Pattern in JDK
 We all know that Collection framework Iterator is the best example of
 iterator pattern implementation but do you know that java.util.Scanner class
 also Implements Iterator interface. Read this post to learn about Java
 Scanner Class(https://www.journaldev.com/872/java-scanner-class-java-util-scanner).
 
-#####Important Points
+##### Important Points
 - Iterator pattern is useful when you want to provide a standard way to
 iterate over a collection and hide the implementation logic from client
 program.
 - The logic for iteration is embedded in the collection itself and it helps
 client program to iterate over them easily.
 
-####5. Mediator Pattern
+#### 5. Mediator Pattern
 
 Mediator Pattern is one of the behavioral design pattern, so it deals with
 the behaviors of objects. Mediator design pattern is used to provide a
@@ -538,7 +538,7 @@ to other applications.
 because if the number of mediators will grow, then it will become
 hard to maintain them.
 
-####6. Memento Pattern
+#### 6. Memento Pattern
 Memento pattern is one of the behavioral design pattern. Memento
 design pattern is used when we want to save the state of an object so that we
 can restore later on. Memento pattern is used to implement this in such a
@@ -556,7 +556,7 @@ Originator’s state through Memento object. Since Memento is private to
 Originator, Caretaker can’t access it and it’s stored as a Object within the
 caretaker.
 
-####7. Observer Pattern
+#### 7. Observer Pattern
 Observer pattern is one of the behavioral design pattern. Observer design
 pattern is useful when you are interested in the state of an object and want to
 get notified whenever there is any change. In observer pattern, the object
@@ -576,7 +576,7 @@ implementations are;
 - javax.servlet.http.HttpSessionBindingListener
 - javax.servlet.http.HttpSessionAttributeListener
 
-####8. State Pattern
+#### 8. State Pattern
 State pattern is one of the behavioral design pattern. State design pattern
 is used when an Object change its behavior based on its internal state.
 
@@ -596,7 +596,7 @@ states for additional behavior making it more robust, easily maintainable and
 flexible. Also State pattern helped in avoiding if-else or switch-case
 conditional logic in this scenario.
 
-####9. Template Method Pattern
+#### 9. Template Method Pattern
 Template Method is a behavioral design pattern and it’s used to create a
 method stub and deferring some of the steps of implementation to the
 subclasses. Template method defines the steps to execute an algorithm and
@@ -623,7 +623,7 @@ of the subclasses.
    final, for example in our case we can make buildFoundation() method
    final because if we don’t want subclasses to override it.
 
-####10. Visitor Pattern
+#### 10. Visitor Pattern
 Visitor Pattern is one of the behavioral design pattern. Visitor pattern is
 used when we have to perform an operation on a group of similar kind of
 Objects. With the help of visitor pattern, we can move the operational logic
