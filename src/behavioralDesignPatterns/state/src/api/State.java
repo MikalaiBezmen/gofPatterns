@@ -7,5 +7,8 @@ package behavioralDesignPatterns.state.src.api;
  */
 public interface State {
 
+    /**
+     * Makes action.
+     */
     void doAction();
 }
